@@ -40,6 +40,22 @@ public class Taller5 {
         System.out.println(sebas.getPromedio());
         sebas.mostrarAsignaturas();
 
+        // Class animal
+
+        Animal perro = new Animal("Vertebrado", true, false, false, true);
+
+        System.out.println("Tipo de animal: " + perro.getTipo());
+        System.out.println("¿Es vivíparo?: " + perro.esViviparo());
+        System.out.println("¿Es herbívoro?: " + perro.esHerbivoro());
+        System.out.println("¿Es acuático?: " + perro.esAcuatico());
+        System.out.println("¿Es terrestre?: " + perro.esTerrestre());
+
+        perro.setEsHerbivoro(true);
+        perro.setEsAcuatico(false);
+
+        
+        System.out.println("¿Es herbívoro ahora?: " + perro.esHerbivoro());
+        System.out.println("¿Es acuático ahora?: " + perro.esAcuatico());
     }
 }
 
@@ -250,5 +266,63 @@ class Alumno {
         for(int i=0; i<this.contadorAsignaturas; i++){
             System.out.println(asignaturas[i] + " - " + asignaturas[i].aprobate());
         }
+    }
+}
+
+class Animal {
+    private String tipo;  // Vertebrado o invertebrado
+    private boolean esViviparo;
+    private boolean esHerbivoro;
+    private boolean esAcuatico;
+    private boolean esTerrestre;
+
+    // Constructor
+    public Animal(String tipo, boolean esViviparo, boolean esHerbivoro, boolean esAcuatico, boolean esTerrestre) {
+        this.tipo = tipo;
+        this.esViviparo = esViviparo;
+        this.esHerbivoro = esHerbivoro;
+        this.esAcuatico = esAcuatico;
+        this.esTerrestre = esTerrestre;
+    }
+
+    // Métodos getters y setters
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public boolean esViviparo() {
+        return esViviparo;
+    }
+
+    public void setEsViviparo(boolean esViviparo) {
+        this.esViviparo = esViviparo;
+    }
+
+    public boolean esHerbivoro() {
+        return esHerbivoro;
+    }
+
+    public void setEsHerbivoro(boolean esHerbivoro) {
+        this.esHerbivoro = esHerbivoro;
+    }
+
+    public boolean esAcuatico() {
+        return esAcuatico;
+    }
+
+    public void setEsAcuatico(boolean esAcuatico) {
+        this.esAcuatico = esAcuatico;
+    }
+
+    public boolean esTerrestre() {
+        return esTerrestre;
+    }
+
+    public void setEsTerrestre(boolean esTerrestre) {
+        this.esTerrestre = esTerrestre;
     }
 }
