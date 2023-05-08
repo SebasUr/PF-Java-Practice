@@ -5,7 +5,7 @@ public class Taller6 {
         printGrid(4,6);
 
         System.out.println(invertirNombre("Sebas"));
-    }
+    } // .
 
     // METHODS ----------------------------------------------------------------------.
     public static String printPowersOf3(int n){
